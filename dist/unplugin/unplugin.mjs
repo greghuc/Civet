@@ -507,7 +507,7 @@ var rawPlugin = (options = {}, meta) => {
           }
         }
         const jsonSourceMap = sourceMap && (typeof sourceMap === "string" ? JSON.parse(sourceMap) : sourceMap.json(
-          path.relative(rootDir, id.replace(/\.[jt]sx$/, "")),
+          path.relative(rootDir, extractCivetFilename(id, outExt).filename),
           path.relative(rootDir, id)
         ));
         let transformed = {
