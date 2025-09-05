@@ -10029,7 +10029,7 @@ var $R9 = (0, import_lib2.$R)(new RegExp("(?=[\\/?])", "suy"));
 var $R10 = (0, import_lib2.$R)(new RegExp("(?=[\\/\\[{?.!@#'\u2019:])", "suy"));
 var $R11 = (0, import_lib2.$R)(new RegExp("%%?", "suy"));
 var $R12 = (0, import_lib2.$R)(new RegExp("[.\\s]", "suy"));
-var $R13 = (0, import_lib2.$R)(new RegExp("[)}]", "suy"));
+var $R13 = (0, import_lib2.$R)(new RegExp("[)\\]}]", "suy"));
 var $R14 = (0, import_lib2.$R)(new RegExp("[+-]", "suy"));
 var $R15 = (0, import_lib2.$R)(new RegExp("\\+\\+|--|\u29FA|\u2014|[\\+\\-&]\\S", "suy"));
 var $R16 = (0, import_lib2.$R)(new RegExp(`(?=[0-9.'"tfyno])`, "suy"));
@@ -12326,7 +12326,7 @@ function ParameterElement(ctx, state2) {
   return (0, import_lib2.$EVENT)(ctx, state2, "ParameterElement", ParameterElement$0);
 }
 var ParameterElementDelimiter$0 = (0, import_lib2.$S)((0, import_lib2.$E)(_), Comma);
-var ParameterElementDelimiter$1 = (0, import_lib2.$Y)((0, import_lib2.$S)(__, (0, import_lib2.$R$0)((0, import_lib2.$EXPECT)($R13, "ParameterElementDelimiter /[)}]/"))));
+var ParameterElementDelimiter$1 = (0, import_lib2.$Y)((0, import_lib2.$S)(__, (0, import_lib2.$R$0)((0, import_lib2.$EXPECT)($R13, "ParameterElementDelimiter /[)\\]}]/"))));
 var ParameterElementDelimiter$2 = (0, import_lib2.$T)((0, import_lib2.$S)((0, import_lib2.$Y)(EOS), InsertComma), function(value) {
   return value[1];
 });
@@ -14262,7 +14262,7 @@ function InlineObjectPropertyDelimiter(ctx, state2) {
   return (0, import_lib2.$EVENT)(ctx, state2, "InlineObjectPropertyDelimiter", InlineObjectPropertyDelimiter$0);
 }
 var ObjectPropertyDelimiter$0 = (0, import_lib2.$S)((0, import_lib2.$E)(_), Comma);
-var ObjectPropertyDelimiter$1 = (0, import_lib2.$Y)((0, import_lib2.$S)(__, (0, import_lib2.$EXPECT)($L37, 'ObjectPropertyDelimiter "}"')));
+var ObjectPropertyDelimiter$1 = (0, import_lib2.$Y)((0, import_lib2.$S)(__, (0, import_lib2.$R$0)((0, import_lib2.$EXPECT)($R13, "ObjectPropertyDelimiter /[)\\]}]/"))));
 var ObjectPropertyDelimiter$2 = (0, import_lib2.$TS)((0, import_lib2.$S)((0, import_lib2.$Y)(EOS), InsertComma), function($skip, $loc, $0, $1, $2) {
   return { ...$2, implicit: true };
 });
